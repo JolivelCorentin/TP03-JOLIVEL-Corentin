@@ -9,7 +9,7 @@
 <button (click)="onClickGetProduits()"> Afficher les produits </button>
 
 <div  *ngFor = "let p of observable1$ | async">
-  {{p.tel}} / {{p.prix}} 
+  Tel : {{p.tel}} - Prix : {{p.prix}} 
 </div>
 
 
@@ -17,7 +17,7 @@
 <button (click)="onClickGetProduitsPasCher()"> Afficher les produits les moins chers </button>
 
 <div  *ngFor = "let p of tabTel">
-  {{p.tel}}  {{p.prix}} 
+  Tel : {{p.tel}} - Prix : {{p.prix}} 
 </div>
 
 
