@@ -15,19 +15,32 @@ export class AppComponent implements OnInit {
   constructor(private produitService : ProduitService)  { }
 
   observable1$ : Observable<any> = null;
+  observable2$ : Observable<any> = null;
+  limiteTelMoinsCher : any = 500;
+  tabTel : Array<any> = [];
   
   ngOnInit(): void {
+
+    this.observable2$ = from ([
+      {"tel":"Samsung S20","prix":900},
+      {"tel":"Iphone 10","prix":1500},
+      {"tel":"Xiaomi","prix":300},
+      {"tel":"WindowsPhone","prix":300}
+  ]
+  
+    );
+
   }
-
-
-
-    onClickBackend() 
+    onClickGetProduits() 
     {
-      this.observable1$ = this.produitService.getProduits ();
-        
+        this.observable1$ = this.produitService.getProduits();
     }
 
-
+    
+    onClickGetProduitsPasCher() 
+    { 
+        this.observable2$.pipe(filter (tel => tel.prix < this.limiteTelMoinsCher )).subscribe (tel => {this.tabTel.push (tel)});  
+    }
   }
 
 

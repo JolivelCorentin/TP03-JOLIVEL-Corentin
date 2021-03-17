@@ -1,7 +1,7 @@
 [
-    {"titre":"Samsung S20","prix":900},
-    {"titre":"Iphone 10","prix":1500},
-    {"titre":"Xiaomi","prix":300},
-    {"titre":"WindowsPhone","prix":300}
+    {"tel":"Samsung S20","prix":900},
+    {"tel":"Iphone 10","prix":1500},
+    {"tel":"Xiaomi","prix":300},
+    {"tel":"WindowsPhone","prix":300}
 ]
 

@@ -1,10 +1,24 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+<div style="text-align: center;">
 <h1>TP3</h1>
 
 
 
 <br/>
-<button (click)="onClickBackend()"> Get Backend</button>
+<button (click)="onClickGetProduits()"> Afficher les produits </button>
 
-<div  *ngFor = "let o of observable1$ | async">
-  {{o.titre}} / {{o.prix}} 
+<div  *ngFor = "let p of observable1$ | async">
+  {{p.tel}} / {{p.prix}} 
+</div>
+
+
+<br/>
+<button (click)="onClickGetProduitsPasCher()"> Afficher les produits les moins chers </button>
+
+<div  *ngFor = "let p of tabTel">
+  {{p.tel}}  {{p.prix}} 
+</div>
+
+
 </div>
